@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #1D1F29;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 75px;
+}
+
+.main-container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.top {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-one h1 {
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.top-one span {
+  color: #8C98C6;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  color: #848BAB;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: right;
+  gap: 13px;
+  font-weight: 700;
+}
+
+.mode .switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.mode-inp {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(225deg, #40DB82 0%, #388FE7 98.02%);
+  transition: .4s;
+  border-radius: 34px;
+  display: flex;
+  align-items: center;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  background-color: #252B42;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.best-overview {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0 auto;
+  margin-top: 56px;
+  flex-wrap: wrap;
+}
+
+.overview {
+  width: 255px;
+  height: 216px;
+  background-color: #252B42;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  text-align: center;
+  margin: 0 auto;
+  transition: .4s;
+}
+
+.overview:hover {
+  background-color: #333A55;
+}
+
+.overview .social a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #8C98C6;
+  text-decoration: none;
+}
+
+.overview .overview-center h2 {
+  color: #ffffff;
+  font-size: 56px;
+  line-height: 48px;
+  letter-spacing: -2px;
+}
+
+.overview .overview-center span {
+  color: #8C98C6;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  position: relative;
+  top: 9px;
+}
+
+.currency {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #1EB589;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.currency.price-low {
+  color: #DC414C;
+}
+
+.overview::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #178FF5;
+  top: 0;
+}
+
+.bottom {
+  width: 100%;
+  margin-top: 46px;
+}
+
+.bottom-top {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bottom-top .title {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.overviews-today {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  top: 24px;
+  position: relative;
+}
+
+.overviews-today .card {
+  width: 255px;
+  height: 125px;
+  background-color: #252B42;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: .4s;
+}
+
+.overviews-today .card .card-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.overviews-today .card .card-item .title {
+  color: #8C98C6;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.overviews-today .card .card-item h5 {
+  color: #ffffff;
+  font-size: 32px;
+}
+
+.card:hover {
+  background-color: #333A55;
+}
+
+@media (max-width: 1200px) {
+  .main-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .top-one,
+  .top-two {
+    width: 100%;
+    position: relative;
+  }
+
+  .top-one {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top-one::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #333A55;
+    bottom: -20px;
+
+  }
+
+  .top-two label {
+    justify-content: space-between;
+  }
+}
